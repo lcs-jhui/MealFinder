@@ -13,4 +13,4 @@ struct Meal: Codable{
     let idMeal: Int
 }
 
-let exampleMeal = Meal(strMeal: "Fettuccine Alfredo", strMealThumb: "Fettuccine", idMeal: "123")
+let exampleMeal = Meal(strMeal: "Fettuccine Alfredo", strMealThumb: "Fettuccine", idMeal: 123)

@@ -20,12 +20,12 @@ struct MealView: View {
             
             VStack{
                 
-                Image("Fettuccine")
+                Image(currentMeal.strMealThumb)
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(15)
                 
-                Text("Fettuccine Alfredo")
+                Text(currentMeal.strMeal)
                     .font(.title)
                 
                 Spacer()
