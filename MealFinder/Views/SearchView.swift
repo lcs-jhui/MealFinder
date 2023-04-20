@@ -40,7 +40,7 @@ struct SearchView: View {
         }
         .task{
             //when the view appears, fetch search results for beef
-            foundMeals = await NetworkService.fetch()
+            foundMeals = await NetworkService.fetch(resultsFor: "chicken")
             taskDone.toggle()
         }
         

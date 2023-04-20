@@ -17,10 +17,14 @@ struct NetworkService {
     // in our app. Since this function might take a while to complete
     // this ensures that other parts of our app (like the user interface)
     // won't "freeze up" while this function does it's job.
-    static func fetch() async -> [Meal] {
+    
+    static func fetch(resultsFor mealName: String) async -> [Meal] {
+        
+        //Clean up the meal name to match requirements
+        let cleanedUpMealName = mealName.lowercased().replacingOccurrences(of: " ", with: "+")
         
         // 1. Attempt to create a URL from the address provided
-        let endpoint = "https://www.themealdb.com/api/json/v1/1/filter.php?i=beef"
+        let endpoint = "https://www.themealdb.com/api/json/v1/1/filter.php?i=\(cleanedUpMealName)"
         guard let url = URL(string: endpoint) else {
             print("Invalid address for JSON endpoint.")
             return []
