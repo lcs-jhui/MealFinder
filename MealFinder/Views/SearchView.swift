@@ -24,8 +24,6 @@ struct SearchView: View {
         NavigationView{
             
             //Show the list of meals that match the search term
-            ZStack {
-                if taskDone {
                     List(foundMeals, id: \.idMeal) { currentMeal in
                         
                         HStack{
@@ -41,15 +39,13 @@ struct SearchView: View {
                         }
                         
                     }
-                } else {
-                    ProgressView()
-                }
-            }
             .searchable(text: $searchText)
-            .task{
-                //when the view appears, fetch search results for beef
-                foundMeals = await NetworkService.fetch(resultsFor: "chicken")
-                taskDone.toggle()
+            .onChange(of: searchText) { newSearchText in
+                
+                Task{
+                    //Fetch search results for whatever user searches for
+                    foundMeals = await NetworkService.fetch(resultsFor: newSearchText)
+                }
             }
         }
         
