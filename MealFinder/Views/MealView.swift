@@ -12,19 +12,18 @@ struct MealView: View {
     //MARK: Stored Properties
     
     //Current meal to dispaly
-    @State var currentMeal = exampleMeal
+    @State var mealToShow: Meal
     
     var body: some View {
         
-        NavigationView{
             
             VStack{
                 
-                AsyncImage(url: URL(string: currentMeal.strMealThumb),scale: 2)
+                AsyncImage(url: URL(string: mealToShow.strMealThumb),scale: 2)
                     .scaledToFit()
                     .cornerRadius(15)
                 
-                Text(currentMeal.strMeal)
+                Text(mealToShow.strMeal)
                     .font(.title)
                 
                 Spacer()
@@ -52,13 +51,11 @@ struct MealView: View {
             }
             .padding()
             
-            .navigationTitle("Meal Finder")
         }
-    }
 }
 
 struct MealView_Previews: PreviewProvider {
     static var previews: some View {
-        MealView()
+        MealView(mealToShow: exampleMeal)
     }
 }

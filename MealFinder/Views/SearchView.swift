@@ -26,19 +26,23 @@ struct SearchView: View {
             //Show the list of meals that match the search term
                     List(foundMeals, id: \.idMeal) { currentMeal in
                         
-                        HStack{
-                            
-                            AsyncImage(url: URL(string: currentMeal.strMealThumb),scale: 2)
-                                .scaledToFit()
-                                .frame(width: 50, height: 50)
-                                .clipped()
-                            
-                            Text(currentMeal.strMeal)
-                                .bold()
-                            
-                        }
-                        
+                        NavigationLink(destination: {
+                            MealView(mealToShow: currentMeal)
+                        }, label: {
+                            HStack{
+                                
+                                AsyncImage(url: URL(string: currentMeal.strMealThumb),scale: 2)
+                                    .scaledToFit()
+                                    .frame(width: 50, height: 50)
+                                    .clipped()
+                                
+                                Text(currentMeal.strMeal)
+                                    .bold()
+                                
+                            }
+                        })
                     }
+                    .navigationTitle("Meal Finder")
             .searchable(text: $searchText)
             .onChange(of: searchText) { newSearchText in
                 
