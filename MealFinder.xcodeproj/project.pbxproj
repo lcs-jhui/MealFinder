@@ -12,6 +12,7 @@
 		B98A088029F194B700033CAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98A087F29F194B700033CAE /* Preview Assets.xcassets */; };
 		B98A088829F194E200033CAE /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A088729F194E200033CAE /* MealView.swift */; };
 		B98A088A29F1952700033CAE /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A088929F1952700033CAE /* Meal.swift */; };
+		B98A088D29F19AA000033CAE /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A088C29F19AA000033CAE /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		B98A087F29F194B700033CAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B98A088729F194E200033CAE /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 		B98A088929F1952700033CAE /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		B98A088C29F19AA000033CAE /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				B98A088929F1952700033CAE /* Meal.swift */,
+				B98A088C29F19AA000033CAE /* SearchResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			files = (
 				B98A087929F194B400033CAE /* MealFinderApp.swift in Sources */,
 				B98A088A29F1952700033CAE /* Meal.swift in Sources */,
+				B98A088D29F19AA000033CAE /* SearchResult.swift in Sources */,
 				B98A088829F194E200033CAE /* MealView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

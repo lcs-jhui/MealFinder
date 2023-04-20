@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Meal: Codable{
+    let strMeal: String
+    let strMealThumb: String
+    let idMeal: Int
+}
+
+let exampleMeal = Meal(strMeal: "Fettuccine Alfredo", strMealThumb: "Fettuccine", idMeal: "123")

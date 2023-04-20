@@ -9,14 +9,51 @@ import SwiftUI
 
 struct MealView: View {
     
+    //MARK: Stored Properties
+    
+    //Current meal to dispaly
+    @State var currentMeal = exampleMeal
+    
     var body: some View {
         
         NavigationView{
             
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            VStack{
+                
+                Image("Fettuccine")
+                    .resizable()
+                    .scaledToFit()
+                    .cornerRadius(15)
+                
+                Text("Fettuccine Alfredo")
+                    .font(.title)
+                
+                Spacer()
+                
+                HStack{
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Save For Later")
+                    })
+                    .buttonStyle(.borderedProminent)
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Cook Now")
+                    })
+                    .buttonStyle(.borderedProminent)
+
+                }
+                
+                Spacer()
+                
+            }
+            .padding()
             
-            
-                .navigationTitle("Meal Finder")
+            .navigationTitle("Meal Finder")
         }
     }
 }
