@@ -20,8 +20,7 @@ struct MealView: View {
             
             VStack{
                 
-                Image(currentMeal.strMealThumb)
-                    .resizable()
+                AsyncImage(url: URL(string: currentMeal.strMealThumb),scale: 2)
                     .scaledToFit()
                     .cornerRadius(15)
                 

@@ -10,7 +10,7 @@ import Foundation
 struct Meal: Codable{
     let strMeal: String
     let strMealThumb: String
-    let idMeal: Int
+    let idMeal: String
 }
 
-let exampleMeal = Meal(strMeal: "Fettuccine Alfredo", strMealThumb: "Fettuccine", idMeal: 123)
+let exampleMeal = Meal(strMeal: "Beef and Mustard Pie ", strMealThumb: "https://www.themealdb.com//images//media//meals//sytuqu1511553755.jpg", idMeal: "52874")

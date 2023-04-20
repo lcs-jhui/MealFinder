@@ -9,5 +9,5 @@ import Foundation
 
 struct SearchResult: Codable {
     
-    let meals:[Meal]
+    let meals: [Meal]
 }

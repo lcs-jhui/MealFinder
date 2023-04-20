@@ -13,16 +13,35 @@ struct SearchView: View {
     
     //Holds the list of meals returned by our search
     @State var foundMeals: [Meal] = []
-    
+    @State var taskDone: Bool = false
     var body: some View {
         
         //Show the list of meals that match the search term
-        List(foundMeals, id: \.idMeal) { currentMeal in
-            
-            VStack {
-                Text(currentMeal.strMeal)
-                    .bold()
+        ZStack {
+            if taskDone {
+                List(foundMeals, id: \.idMeal) { currentMeal in
+                    
+                    HStack{
+                        
+                        AsyncImage(url: URL(string: currentMeal.strMealThumb),scale: 2)
+                            .scaledToFit()
+                            .frame(width: 50, height: 50)
+                            .clipped()
+                        
+                        Text(currentMeal.strMeal)
+                            .bold()
+                        
+                    }
+                    
+                }
+            } else {
+                ProgressView()
             }
+        }
+        .task{
+            //when the view appears, fetch search results for beef
+            foundMeals = await NetworkService.fetch()
+            taskDone.toggle()
         }
         
     }
@@ -30,6 +49,7 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
+        
         SearchView()
     }
 }
