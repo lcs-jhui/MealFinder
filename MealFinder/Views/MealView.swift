@@ -30,6 +30,8 @@ struct MealView: View {
                 
                 HStack{
                     
+                    //Link(<#T##title: StringProtocol##StringProtocol#>, destination: <#T##URL#>)
+                    
                     Button(action: {
                         
                     }, label: {

@@ -15,6 +15,7 @@ struct RemoteImageView: View {
     
     // What image to show
     let urlOfImageToShow: String
+    let desiredWidth: CGFloat
     
     // MARK: Computed properties
     var body: some View {
@@ -26,6 +27,9 @@ struct RemoteImageView: View {
             AsyncImage(url: url,
                        content: { downloadedImage in
                 downloadedImage
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: desiredWidth)
             },
                        placeholder: {
                 ProgressView()
@@ -49,10 +53,10 @@ struct RemoteImageView_Previews: PreviewProvider {
     static var previews: some View {
         
         // Good URL example
-        RemoteImageView(urlOfImageToShow: "https://www.themealdb.com//images//media//meals//sytuqu1511553755.jpg")
+        RemoteImageView(urlOfImageToShow: "https://www.themealdb.com//images//media//meals//sytuqu1511553755.jpg", desiredWidth: 100)
 
         // Bad URL example
-        RemoteImageView(urlOfImageToShow: "")
+        RemoteImageView(urlOfImageToShow: "", desiredWidth: 100)
 
     }
     

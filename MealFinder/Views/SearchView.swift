@@ -17,8 +17,6 @@ struct SearchView: View {
     //Holds the song name the user is searching for
     @State var searchText = ""
     
-    //Debugging if it succeeded or failed
-    @State var taskDone: Bool = false
     var body: some View {
         
         NavigationView{
@@ -31,10 +29,8 @@ struct SearchView: View {
                         }, label: {
                             HStack{
                                 
-                                AsyncImage(url: URL(string: currentMeal.strMealThumb),scale: 2)
-                                    .scaledToFit()
-                                    .frame(width: 50, height: 50)
-                                    .clipped()
+                                RemoteImageView(urlOfImageToShow: currentMeal.strMealThumb,
+                                                desiredWidth: 50)
                                 
                                 Text(currentMeal.strMeal)
                                     .bold()
