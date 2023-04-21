@@ -5,12 +5,13 @@
 //  Created by Justin Hui on 20/4/2023.
 //
 
+import Blackbird
 import Foundation
 
-struct Meal: Codable{
-    let strMeal: String
-    let strMealThumb: String
-    let idMeal: String
+struct Meal: Codable, BlackbirdModel{
+    @BlackbirdColumn var strMeal: String
+    @BlackbirdColumn var strMealThumb: String
+    @BlackbirdColumn var idMeal: String
 }
 
 
