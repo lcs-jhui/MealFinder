@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B971A8ED29F2241E008E6379 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = B971A8EC29F2241E008E6379 /* Blackbird */; };
 		B971A8EF29F22565008E6379 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B971A8EE29F22565008E6379 /* db.sqlite */; };
+		B971A8F229F22696008E6379 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B971A8F129F22696008E6379 /* AppDatabase.swift */; };
 		B98A087929F194B400033CAE /* MealFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A087829F194B400033CAE /* MealFinderApp.swift */; };
 		B98A087D29F194B700033CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98A087C29F194B700033CAE /* Assets.xcassets */; };
 		B98A088029F194B700033CAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98A087F29F194B700033CAE /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		B971A8EE29F22565008E6379 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		B971A8F129F22696008E6379 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 		B98A087529F194B400033CAE /* MealFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98A087829F194B400033CAE /* MealFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFinderApp.swift; sourceTree = "<group>"; };
 		B98A087C29F194B700033CAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B971A8F029F22686008E6379 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B971A8F129F22696008E6379 /* AppDatabase.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		B98A086C29F194B400033CAE = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				B98A087829F194B400033CAE /* MealFinderApp.swift */,
+				B971A8F029F22686008E6379 /* Helpers */,
 				B98A089029F19D1500033CAE /* Services */,
 				B98A088B29F1952C00033CAE /* Model */,
 				B98A088629F194D000033CAE /* Views */,
@@ -198,6 +209,7 @@
 			files = (
 				B98A088F29F19BD000033CAE /* SearchView.swift in Sources */,
 				B98A087929F194B400033CAE /* MealFinderApp.swift in Sources */,
+				B971A8F229F22696008E6379 /* AppDatabase.swift in Sources */,
 				B98A088A29F1952700033CAE /* Meal.swift in Sources */,
 				B98A088D29F19AA000033CAE /* SearchResult.swift in Sources */,
 				B98A089229F19D2600033CAE /* NetworkService.swift in Sources */,
