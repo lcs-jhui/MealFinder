@@ -11,7 +11,8 @@ import SwiftUI
 struct MealFinderApp: App {
     var body: some Scene {
         WindowGroup {
-            MealView(mealToShow: exampleMeal)
+            SearchView()
+            
         }
     }
 }

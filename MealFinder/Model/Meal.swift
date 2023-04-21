@@ -13,4 +13,5 @@ struct Meal: Codable{
     let idMeal: String
 }
 
+
 let exampleMeal = Meal(strMeal: "Beef and Mustard Pie ", strMealThumb: "https://www.themealdb.com//images//media//meals//sytuqu1511553755.jpg", idMeal: "52874")

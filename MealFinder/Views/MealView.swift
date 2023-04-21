@@ -30,8 +30,6 @@ struct MealView: View {
                 
                 HStack{
                     
-                    //Link(<#T##title: StringProtocol##StringProtocol#>, destination: <#T##URL#>)
-                    
                     Button(action: {
                         
                     }, label: {
@@ -39,10 +37,12 @@ struct MealView: View {
                     })
                     .buttonStyle(.borderedProminent)
                     
-                    Button(action: {
+                    
+                    Link(destination: URL(string: "https://www.themealdb.com/api/json/v1/1/lookup.php?i=\(mealToShow.idMeal)")!, label: {
                         
-                    }, label: {
                         Text("Cook Now")
+                        
+
                     })
                     .buttonStyle(.borderedProminent)
 
