@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B95DD02829F36F7D00839CF1 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B95DD02729F36F7D00839CF1 /* db.sqlite */; };
+		B95DD02A29F456B100839CF1 /* DetailedMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DD02929F456B100839CF1 /* DetailedMeal.swift */; };
+		B95DD02C29F456CE00839CF1 /* MealLookupResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DD02B29F456CE00839CF1 /* MealLookupResult.swift */; };
 		B971A8ED29F2241E008E6379 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = B971A8EC29F2241E008E6379 /* Blackbird */; };
-		B971A8EF29F22565008E6379 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B971A8EE29F22565008E6379 /* db.sqlite */; };
 		B971A8F229F22696008E6379 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B971A8F129F22696008E6379 /* AppDatabase.swift */; };
 		B971A8F429F227A7008E6379 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B971A8F329F227A7008E6379 /* SavedView.swift */; };
 		B98A087929F194B400033CAE /* MealFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A087829F194B400033CAE /* MealFinderApp.swift */; };
@@ -23,7 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B971A8EE29F22565008E6379 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		B95DD02729F36F7D00839CF1 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		B95DD02929F456B100839CF1 /* DetailedMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMeal.swift; sourceTree = "<group>"; };
+		B95DD02B29F456CE00839CF1 /* MealLookupResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLookupResult.swift; sourceTree = "<group>"; };
 		B971A8F129F22696008E6379 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 		B971A8F329F227A7008E6379 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		B98A087529F194B400033CAE /* MealFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,9 +114,11 @@
 		B98A088B29F1952C00033CAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B971A8EE29F22565008E6379 /* db.sqlite */,
+				B95DD02729F36F7D00839CF1 /* db.sqlite */,
 				B98A088929F1952700033CAE /* Meal.swift */,
 				B98A088C29F19AA000033CAE /* SearchResult.swift */,
+				B95DD02929F456B100839CF1 /* DetailedMeal.swift */,
+				B95DD02B29F456CE00839CF1 /* MealLookupResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,7 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B98A088029F194B700033CAE /* Preview Assets.xcassets in Resources */,
-				B971A8EF29F22565008E6379 /* db.sqlite in Resources */,
+				B95DD02829F36F7D00839CF1 /* db.sqlite in Resources */,
 				B98A087D29F194B700033CAE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,11 +216,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B95DD02A29F456B100839CF1 /* DetailedMeal.swift in Sources */,
 				B98A088F29F19BD000033CAE /* SearchView.swift in Sources */,
 				B98A087929F194B400033CAE /* MealFinderApp.swift in Sources */,
 				B971A8F229F22696008E6379 /* AppDatabase.swift in Sources */,
 				B98A088A29F1952700033CAE /* Meal.swift in Sources */,
 				B98A088D29F19AA000033CAE /* SearchResult.swift in Sources */,
+				B95DD02C29F456CE00839CF1 /* MealLookupResult.swift in Sources */,
 				B971A8F429F227A7008E6379 /* SavedView.swift in Sources */,
 				B98A089229F19D2600033CAE /* NetworkService.swift in Sources */,
 				B98A088829F194E200033CAE /* MealView.swift in Sources */,

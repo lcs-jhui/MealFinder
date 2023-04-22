@@ -25,7 +25,7 @@ struct SearchView: View {
                     List(foundMeals, id: \.idMeal) { currentMeal in
                         
                         NavigationLink(destination: {
-                            MealView(mealToShow: currentMeal)
+                            MealView(mealToShow: currentMeal, detailedMeal: exampleDetailedMeal)
                         }, label: {
                             HStack{
                                 

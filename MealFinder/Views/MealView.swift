@@ -13,6 +13,7 @@ struct MealView: View {
     
     //Current meal to dispaly
     @State var mealToShow: Meal
+    @State var detailedMeal: DetailedMeal
     
     var body: some View {
         
@@ -38,7 +39,7 @@ struct MealView: View {
                     .buttonStyle(.borderedProminent)
                     
                     
-                    Link(destination: URL(string: "https://www.themealdb.com/api/json/v1/1/lookup.php?i=\(mealToShow.idMeal)")!, label: {
+                    Link(destination: URL(string: detailedMeal.strSource)!, label: {
                         
                         Text("Cook Now")
                         
@@ -52,12 +53,15 @@ struct MealView: View {
                 
             }
             .padding()
+            .task {
+                detailedMeal = await NetworkService.fetchSource(forMealID: mealToShow.idMeal)
+            }
             
         }
 }
 
 struct MealView_Previews: PreviewProvider {
     static var previews: some View {
-        MealView(mealToShow: exampleMeal)
+        MealView(mealToShow: exampleMeal, detailedMeal: exampleDetailedMeal)
     }
 }

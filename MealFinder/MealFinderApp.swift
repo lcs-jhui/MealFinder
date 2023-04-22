@@ -12,7 +12,7 @@ struct MealFinderApp: App {
     var body: some Scene {
         WindowGroup {
             SearchView()
-                .environment(\.blackbirdDatabase, AppDatabase.instance)
+                //.environment(\.blackbirdDatabase, AppDatabase.instance)
         }
     }
 }
