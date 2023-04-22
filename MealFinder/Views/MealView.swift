@@ -14,50 +14,47 @@ struct MealView: View {
     //Current meal to dispaly
     @State var mealToShow: Meal
     @State var detailedMeal: DetailedMeal
-    
+
     var body: some View {
         
+        
+        VStack{
             
-            VStack{
+            AsyncImage(url: URL(string: mealToShow.strMealThumb),scale: 2)
+                .scaledToFit()
+                .cornerRadius(15)
+            
+            Text(mealToShow.strMeal)
+                .font(.title)
+            
+            Spacer()
+            
+            HStack{
                 
-                AsyncImage(url: URL(string: mealToShow.strMealThumb),scale: 2)
-                    .scaledToFit()
-                    .cornerRadius(15)
-                
-                Text(mealToShow.strMeal)
-                    .font(.title)
-                
-                Spacer()
-                
-                HStack{
+                Button(action: {
                     
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Save For Later")
-                    })
-                    .buttonStyle(.borderedProminent)
-                    
-                    
-                    Link(destination: URL(string: detailedMeal.strSource)!, label: {
-                        
-                        Text("Cook Now")
-                        
-
-                    })
-                    .buttonStyle(.borderedProminent)
-
-                }
+                }, label: {
+                    Text("Save For Later")
+                })
+                .buttonStyle(.borderedProminent)
                 
-                Spacer()
+                
+                Link(destination: URL(string: detailedMeal.strSource)!, label: {
+                    
+                    Text("Cook Now")
+                    
+                    
+                })
+                .buttonStyle(.borderedProminent)
                 
             }
-            .padding()
-            .task {
-                detailedMeal = await NetworkService.fetchSource(forMealID: mealToShow.idMeal)
-            }
+            
+            Spacer()
             
         }
+        .padding()
+    }
+    
 }
 
 struct MealView_Previews: PreviewProvider {

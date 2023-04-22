@@ -22,6 +22,7 @@
 		B98A088F29F19BD000033CAE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A088E29F19BD000033CAE /* SearchView.swift */; };
 		B98A089229F19D2600033CAE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A089129F19D2600033CAE /* NetworkService.swift */; };
 		B98A089729F1DC2000033CAE /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A089629F1DC2000033CAE /* RemoteImageView.swift */; };
+		B9D846F729F474E500F1598F /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D846F629F474E500F1598F /* Testing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B98A088E29F19BD000033CAE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		B98A089129F19D2600033CAE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B98A089629F1DC2000033CAE /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
+		B9D846F629F474E500F1598F /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		B98A088629F194D000033CAE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B9D846F629F474E500F1598F /* Testing.swift */,
 				B98A088729F194E200033CAE /* MealView.swift */,
 				B98A088E29F19BD000033CAE /* SearchView.swift */,
 				B971A8F329F227A7008E6379 /* SavedView.swift */,
@@ -222,6 +225,7 @@
 				B971A8F229F22696008E6379 /* AppDatabase.swift in Sources */,
 				B98A088A29F1952700033CAE /* Meal.swift in Sources */,
 				B98A088D29F19AA000033CAE /* SearchResult.swift in Sources */,
+				B9D846F729F474E500F1598F /* Testing.swift in Sources */,
 				B95DD02C29F456CE00839CF1 /* MealLookupResult.swift in Sources */,
 				B971A8F429F227A7008E6379 /* SavedView.swift in Sources */,
 				B98A089229F19D2600033CAE /* NetworkService.swift in Sources */,
