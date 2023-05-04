@@ -64,6 +64,9 @@ struct MealView: View {
             
         }
         .padding()
+        .task {
+            detailedMeal = await NetworkService.fetchSource(forMealID: mealToShow.idMeal)
+        }
     }
     
 }
