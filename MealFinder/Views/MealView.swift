@@ -12,44 +12,55 @@ struct MealView: View {
     //MARK: Stored Properties
     
     //Current meal to dispaly
-    @State var mealToShow: Meal
-    @State var detailedMeal: DetailedMeal
+    var mealToShow: Meal
+    @State var detailedMeal: DetailedMeal? = nil
 
     var body: some View {
         
         
+        
         VStack{
             
-            AsyncImage(url: URL(string: mealToShow.strMealThumb),scale: 2)
-                .scaledToFit()
-                .cornerRadius(15)
-            
-            Text(mealToShow.strMeal)
-                .font(.title)
-            
-            Spacer()
-            
-            HStack{
+            if let meal = detailedMeal {
                 
-                Button(action: {
-                    
-                }, label: {
-                    Text("Save For Later")
-                })
-                .buttonStyle(.borderedProminent)
+                AsyncImage(url: URL(string: mealToShow.strMealThumb),scale: 2)
+                    .scaledToFit()
+                    .cornerRadius(15)
                 
+                Text(mealToShow.strMeal)
+                    .font(.title)
                 
-                Link(destination: URL(string: detailedMeal.strSource)!, label: {
+                Spacer()
+                
+                HStack{
                     
-                    Text("Cook Now")
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Save For Later")
+                    })
+                    .buttonStyle(.borderedProminent)
                     
                     
-                })
-                .buttonStyle(.borderedProminent)
+                    Link(destination: URL(string: meal.strSource)!, label: {
+                        
+                        Text("Cook Now")
+                        
+                        
+                    })
+                    .buttonStyle(.borderedProminent)
+                    
+                }
+                
+                Spacer()
+                
+            } else {
+                
+                ProgressView()
                 
             }
             
-            Spacer()
+        
             
         }
         .padding()
