@@ -11,8 +11,22 @@ import SwiftUI
 struct MealFinderApp: App {
     var body: some Scene {
         WindowGroup {
-            SearchView()
-                .environment(\.blackbirdDatabase, AppDatabase.instance)
+            TabView{
+                
+                SearchView()
+                    .tabItem{
+                        Image(systemName: "fork.knife")
+                        Text("Meals")
+                    }
+                
+                SavedView()
+                    .tabItem{
+                        Image(systemName: "list.star")
+                        Text("Saved")
+                    }
+                
+            }
+            .environment(\.blackbirdDatabase, AppDatabase.instance)
         }
     }
 }

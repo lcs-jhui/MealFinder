@@ -4,20 +4,20 @@
 //
 //  Created by Justin Hui on 20/4/2023.
 //
-
+import Blackbird
 import SwiftUI
 
 struct MealView: View {
     
     //MARK: Stored Properties
     
+    @Environment(\.blackbirdDatabase) var db: Blackbird.Database?
+    
     //Current meal to dispaly
     var mealToShow: Meal
     @State var detailedMeal: DetailedMeal? = nil
 
     var body: some View {
-        
-        
         
         VStack{
             
@@ -36,7 +36,13 @@ struct MealView: View {
                     
                     Button(action: {
                         
-                        
+                        Task{
+                            
+                                try await db!.transaction { core in
+                                    try core.query("INSERT INTO Meal (idMeal, strMeal, strMealThumb) VALUES (?, ?, ?)", mealToShow.idMeal, mealToShow.strMeal, mealToShow.strMealThumb)
+                            }
+                            
+                        }
                         
                     }, label: {
                         Text("Save For Later")
@@ -76,5 +82,6 @@ struct MealView: View {
 struct MealView_Previews: PreviewProvider {
     static var previews: some View {
         MealView(mealToShow: exampleMeal, detailedMeal: exampleDetailedMeal)
+            .environment(\.blackbirdDatabase, AppDatabase.instance)
     }
 }
