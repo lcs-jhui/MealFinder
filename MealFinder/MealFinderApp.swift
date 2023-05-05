@@ -4,7 +4,7 @@
 //
 //  Created by Justin Hui on 20/4/2023.
 //
-
+import Blackbird
 import SwiftUI
 
 @main
@@ -12,7 +12,7 @@ struct MealFinderApp: App {
     var body: some Scene {
         WindowGroup {
             SearchView()
-                //.environment(\.blackbirdDatabase, AppDatabase.instance)
+                .environment(\.blackbirdDatabase, AppDatabase.instance)
         }
     }
 }
